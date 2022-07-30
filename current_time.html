@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <script src="index.js"></script>
+    <h1>helllo world</h1>
+    <button onclick="myfunction()">click me</button>
+    <p id="new"></p>
+    <div>
+        <h1> current time : <span id="time"></span> </h1>
+    </div>
+    <script>
+        function myfunction() {
+            document.getElementById("new").innerHTML = "click the botton";
+        }
+    </script>
+    <script>
+        
+        setInterval(() => {
+        let a = new Date();
+        let date = a.toLocaleDateString();
+        let time = a.getHours() + ':' + a .getMinutes() + ':' + a.getSeconds();
+        document.getElementById('time').innerHTML = time + " on " + date;
+    }, 1000);
+    </script>
+</body>
+</html>
